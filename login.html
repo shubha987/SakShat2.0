@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Sakshat: Online Dating Made Easy</title>
+	<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+	<div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()"><b>Login</b></button>
+                <button type="button" class="toggle-btn" onclick="register()"><b>Register</b></button>
+            </div>
+            <form id="login" class="input-group">
+                <input type="emaill" class="input-field" placeholder="Enter your E-mail" id="emaill">
+                <p id="emailerrorl" class="error"></p>
+                <input type="password" class="input-field" placeholder="Enter Password" id="passl">
+                <p id="passerrorl" class="error"></p>
+                <div class="forget-pass text-left"><a href="forget-password.html">Forgot password?</a></div>
+                
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <a input type="submit" class="submit-btn" onclick="return vf1()"><b>Login</b></a>
+            </form>
+            <form action="" id="register" class="input-group" >
+                <input type="text" class="input-field" placeholder="Enter Your Name" id="name">
+                <p id="nameerror" class="error"></p>
+                <input type="number" class="input-field" placeholder="Age" id="age">
+                <p id="ageerror" class="error"></p>
+                <div>
+                    <p class="sex">Sex</p><br>
+                    <input type="radio" name="gender" id="male" value="male"> Male 
+                    <input type="radio" name="gender" id="female" value="female"> Female 
+                </div>
+                <p id="gendererror" class="error"></p>                
+                <input type="email" class="input-field" placeholder="E-mail ID" id="email">
+                <p id="emailerror" class="error"></p>
+                <input type="password" class="input-field" placeholder="Enter Password" id="pass">
+                <p id="passerror" class="error"></p>  
+                <input type="password" class="input-field" placeholder="Re-Enter Password" id="pass1">
+                <p id="passerror1" class="error"></p>
+                <input type="checkbox" class="check-box"><span>I agree to the <a href="terms&conditions.html" class="link"><u>terms & conditions</u></a></span>
+                <a input type="submit" class="submit-btn" onclick="return vf()"><b>Register</b></a>
+
+            </form>
+        </div>
+    </div>	  
+    <script>
+        var x=document.getElementById("login");
+        var y=document.getElementById("register");
+        var z=document.getElementById("btn");
+
+        function register(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="";
+        }
+    </script>
+    <script>
+        let name = document.getElementById("name");
+        let age = document.getElementById("age");
+        let gender = document.getElementsByName("gender");
+        let pass = document.getElementById("pass");
+        let pass1 = document.getElementById("pass1");
+        let email = document.getElementById("email");
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let flag=1;
+
+        function vf() {
+            if(name.value == "") {
+                document.getElementById("nameerror").innerHTML = "Name can't be empty";
+                flag=0;
+            }else if(name.value.length < 3) {
+                document.getElementById("nameerror").innerHTML = "Name must be at least 3 character long";
+                flag=0;
+            }else{
+                document.getElementById("nameerror").innerHTML = "";
+                flag=1;
+            }
+
+            if(pass1.value == "") {
+                document.getElementById("passerror1").innerHTML = "Password can't be empty";
+                flag=0;
+            }else if(pass1.value.length < 8) {
+                document.getElementById("passerror1").innerHTML = "Password must be at least 8 character long";
+                flag=0;
+            }else if(pass1.value.length > 20) {
+                document.getElementById("passerror1").innerHTML = "Password can't be 20 character long";
+                flag=0;
+            }else{
+                document.getElementById("passerror1").innerHTML = "";
+                flag=1;
+            }
+
+            if(email.value == "") {
+            document.getElementById("emailerror").innerHTML = "E-mail Id can't be empty";
+            flag=0;
+            }else if(!emailRegex.test(email.value)) {
+            document.getElementById("emailerror").innerHTML = "Please enter a valid email address";
+            flag=0;
+            }else{
+            document.getElementById("emailerror").innerHTML = "";
+            flag=1;
+            }
+
+            if(pass.value == "") {
+                document.getElementById("passerror").innerHTML = "Password can't be empty";
+                flag=0;
+            }else if(pass.value.length < 8) {
+                document.getElementById("passerror").innerHTML = "Password must be at least 8 character long";
+                flag=0;
+            }else if(pass.value.length > 20) {
+                document.getElementById("passerror").innerHTML = "Password can't be 20 character long";
+                flag=0;
+            }else{
+                document.getElementById("passerror").innerHTML = "";
+                flag=1;
+            }
+
+            let genderSelected = false;
+for (let i = 0; i < gender.length; i++) {
+    if (gender[i].checked) {
+        genderSelected = true;
+        break;
+    }
+}
+if (!genderSelected) {
+    document.getElementById("gendererror").innerHTML = "Please select your gender";
+    flag = 0;
+} else {
+    document.getElementById("gendererror").innerHTML = "";
+    flag = 1;
+}
+
+            
+
+            if(age.value == "") {
+                document.getElementById("ageerror").innerHTML = "Age can't be empty";
+                flag=0;
+            }else if(age.value < 18) {
+                document.getElementById("ageerror").innerHTML = "Age must be atleast 18";
+                flag=0;
+            }else{
+                document.getElementById("ageerror").innerHTML = "";
+                flag=1;
+            }
+
+            
+
+            if (flag){
+                return true;
+            }
+            else{
+                return false;
+            }
+            
+        }
+
+        
+    </script>
+     <script>
+        let passl = document.getElementById("pass");
+        let emaill = document.getElementById("email");
+        let emailRegexl = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let flag1=1;
+
+        function vf1() {
+            if(email.value == "") {
+            document.getElementById("emailerrorl").innerHTML = "E-mail Id can't be empty";
+            flag1=0;
+            }else if(!emailRegexl.test(emaill.value)) {
+            document.getElementById("emailerrorl").innerHTML = "Please enter a valid email address";
+            flag1=0;
+            }else{
+            document.getElementById("emailerrorl").innerHTML = "";
+            flag1=1;
+            }
+
+            if(passl.value == "") {
+                document.getElementById("passerrorl").innerHTML = "Password can't be empty";
+                flag1=0;
+            }else if(passl.value.length < 8) {
+                document.getElementById("passerrorl").innerHTML = "Password must be at least 8 character long";
+                flag1=0;
+            }else if(passl.value.length > 20) {
+                document.getElementById("passerrorl").innerHTML = "Password can't be 20 character long";
+                flag1=0;
+            }else{
+                document.getElementById("passerrorl").innerHTML = "";
+                flag1=1;
+            }            
+
+            if (flag1){
+                return true;
+            }
+            else{
+                return false;
+            }
+            
+        }
+
+        
+    </script>
+</body>
+</html>

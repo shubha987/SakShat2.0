@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    margin: 0;
+    color: #fff;
+}
+
+p{
+    color: #fff;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/pic2.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.otp-card{
+    text-align: center;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 4rem;
+    box-shadow: 0 10px 40px -20px black;
+}
+
+.otp-card-inputs{
+    margin: 5px 0;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(6, auto);
+}
+
+.otp-card-inputs input {
+    width: 60px;
+    height: 70px;
+    font-size: 35px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.otp-card-input input:focus{
+    outline: 2px solid blueviolet;
+    border-color: transparent;
+}
+
+.otp-card button{
+    background-color: #ff3e3d;
+    border: none;
+    padding: 15px 50px;
+    font-size: 18px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.otp-card button:hover{
+    opacity: .9;
+}
+
+.otp-card button[disabled] {
+    opacity: .6;
+    cursor: default;
+}

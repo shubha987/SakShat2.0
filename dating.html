@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sakshat: Online Dating Made Easy</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="preloader"></div>
+	<div class="header">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+            <nav>
+                <ul id="menulist">
+                    <li><a href="dating.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vip.html" class="vip">VIP</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+					<div class="dropdown">
+						<li class="dropbtn"><a href="st.html">Safety</a></li>
+						<div class="dropdown-content">
+							<div>
+								<p class="tc"><a href="cg.html">Community Guidelines</a></p>
+	    						<p class="tc"><a href="st.html">Safety tips</a></p>
+	    						<p class="tc"><a href="s.html">Security</a></p>
+							</div>
+							
+						</div>
+					</div>	
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" onclick="toggle_menu()">
+        </div>
+        <div class="text-box">
+            <h1>Welcome to Sakshat</h1>
+			<p>Find your perfect match with us</p>
+            <button type="button" id="button1" class="btn">Join Now</button>
+            <button type="button" id="button2" class="btn">Join As Guest</button>
+            <script>
+				const button1 = document.getElementById("button1");
+				const button2 = document.getElementById("button2");
+				const body = document.body;
+			
+				button1.addEventListener("mouseover", () => {
+				  body.style.backgroundImage = "url('images/pic2.jpg')";
+				  body.style.backgroundSize = "cover";
+				  body.style.backgroundPosition = "center";
+				  body.style.transition= "0.8s";
+				});
+			
+				button1.addEventListener("mouseout", () => {
+				  body.style.backgroundImage = "url('images/pic.jpg')";
+				  body.style.backgroundSize = "cover";
+				  body.style.backgroundPosition = "center";
+				  body.style.transition= "0.8s";
+				});
+			
+				button2.addEventListener("mouseover", () => {
+				  body.style.backgroundImage = "url('images/pic3.jpg')";
+				  body.style.backgroundSize = "cover";
+				  body.style.backgroundPosition = "center";
+				  body.style.transition= "0.8s";
+				});
+			
+				button2.addEventListener("mouseout", () => {
+				  body.style.backgroundImage = "url('images/pic.jpg')";
+				  body.style.backgroundSize = "cover";
+				  body.style.backgroundPosition = "center";
+				  body.style.transition= "0.8s";
+				});
+			  </script>
+        </div>
+    </div>
+	<script>
+		var menulist=document.getElementById("menulist");
+        menulist.style.maxHeight="0px";
+        function toggle_menu(){
+            if(menulist.style.maxHeight == "0px")
+            {
+                menulist.style.maxHeight = "190px"
+            }
+            else
+            {
+                menulist.style.maxHeight = "0px"
+            }
+        }
+    </script>
+	<p class="f1">All photos are  of models and used for illustrative purpose only</p>
+
+
+
+	<script>
+		var loader = document.getElementById("preloader");
+
+		window.addEventListener("load", function(){
+			loader.style.display = "none";
+		})
+	</script>
+
+
+
+
+
+
+
+</body>
+<footer>
+	<p>©Copyright 2023 SAKSHAT. All rights reserved.</p>
+</footer>
+</html>
