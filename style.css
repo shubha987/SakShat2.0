@@ -20,6 +20,12 @@ body{
     position: relative;
 }
 
+.gif{
+    width:8vh;
+    position: relative;
+    left: 60px;
+}
+
 .navbar{
     width: 100%;
     display: flex;
@@ -56,7 +62,7 @@ nav ul li{
     margin-right: 30px;
     position: relative;
     left: 100px;
-    bottom: 30px;
+    bottom: 55px;
 }
 
 footer {
