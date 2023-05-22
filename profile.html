@@ -17,12 +17,13 @@
     }
     .container {
       display: flex;
-      max-width: 1200px;
+      max-width: 2200px;
+      height: 821px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0px;
     }
     .navbar {
-      flex: 0 0 200px;
+      flex: 0 0 250px;
       background-color: #ffffff;
       padding: 20px;
       box-shadow: inset 0 -8px 8px -8px #333333;
@@ -65,8 +66,29 @@
     }
     .profile-card {
       background-color: #ffffff;
+      position: relative;
+      top: 20px;
+      left: 40px;
       padding: 30px;
       display: flex;
+      height: 350px;
+      width: 350px;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-card1 {
+      background-color: #ffffff;
+      position: relative;
+      top: 10px;
+      left: 40px;
+      padding: 30px;
+      display: flex;
+      height: 800px;
+      width: 1200px;
       flex-direction: column;
       justify-content: space-between;
       border-radius: 10px;
@@ -77,8 +99,8 @@
       transform: translateY(-5px);
     }
     .profile-card img {
-      width: 150px;
-      height: 150px;
+      width: 50px;
+      height: 400px;
       object-fit: cover;
       border-radius: 50%;
       margin-bottom: 20px;
@@ -191,7 +213,47 @@
         <p><i class="fas fa-star"></i> Interests: Fitness, Music, Reading</p>
         <button>View Profile</button>
       </div>
-      <div class="profile-card search-filters" style="display: none;">
+      <div class="profile-card" style="display: none;">
+        <img src="profile-image.jpg" alt="Profile Image">
+        <h2>Jane Smith</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Los Angeles</p>
+        <p><i class="fas fa-birthday-cake"></i> 28 years old</p>
+        <p><i class="fas fa-heart"></i> Divorced</p>
+        <p><i class="fas fa-graduation-cap"></i> MBA Graduate</p>
+        <p><i class="fas fa-star"></i> Interests: Fitness, Music, Reading</p>
+        <button>View Profile</button>
+      </div>
+      <div class="profile-card" style="display: none;">
+        <img src="profile-image.jpg" alt="Profile Image">
+        <h2>Jane Smith</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Los Angeles</p>
+        <p><i class="fas fa-birthday-cake"></i> 28 years old</p>
+        <p><i class="fas fa-heart"></i> Divorced</p>
+        <p><i class="fas fa-graduation-cap"></i> MBA Graduate</p>
+        <p><i class="fas fa-star"></i> Interests: Fitness, Music, Reading</p>
+        <button>View Profile</button>
+      </div>
+      <div class="profile-card" style="display: none;">
+        <img src="profile-image.jpg" alt="Profile Image">
+        <h2>Jane Smith</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Los Angeles</p>
+        <p><i class="fas fa-birthday-cake"></i> 28 years old</p>
+        <p><i class="fas fa-heart"></i> Divorced</p>
+        <p><i class="fas fa-graduation-cap"></i> MBA Graduate</p>
+        <p><i class="fas fa-star"></i> Interests: Fitness, Music, Reading</p>
+        <button>View Profile</button>
+      </div>
+      <div class="profile-card" style="display: none;">
+        <img src="profile-image.jpg" alt="Profile Image">
+        <h2>Jane Smith</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Los Angeles</p>
+        <p><i class="fas fa-birthday-cake"></i> 28 years old</p>
+        <p><i class="fas fa-heart"></i> Divorced</p>
+        <p><i class="fas fa-graduation-cap"></i> MBA Graduate</p>
+        <p><i class="fas fa-star"></i> Interests: Fitness, Music, Reading</p>
+        <button>View Profile</button>
+      </div>
+      <div class="profile-card1 search-filters" style="display: none;">
         <label for="location">Location:</label>
         <input type="text" id="location" name="location">
         <label for="status">Relationship Status:</label>
@@ -202,8 +264,29 @@
         </select>
         <label for="education">Education:</label>
         <input type="text" id="education" name="education">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="99">
+        <label for="interests">Interests:</label>
+        <input type="text" id="interests" name="interests">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" min="100" max="250">
+        <label for="hobbies">Hobbies:</label>
+        <input type="text" id="hobbies" name="hobbies">
+        <label for="language">Language:</label>
+        <input type="text" id="language" name="language">
+        <label for="ethnicity">Ethnicity:</label>
+        <input type="text" id="ethnicity" name="ethnicity">
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" name="occupation">
         <button>Apply Filters</button>
       </div>
+      
       <div class="signout-popup" style="display: none;">
         <h2>Are you sure you want to sign out?</h2>
         <a href="login.html"><button id="signout-yes">Yes</button></a>
