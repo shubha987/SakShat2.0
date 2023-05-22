@@ -264,6 +264,38 @@
       // Close the sign out popup
       signoutPopup.style.display = 'none';
     });
+
+    // Show sign out popup when "Sign Out" is clicked
+document.querySelector('a[href="#SignOut"]').addEventListener('click', () => {
+  signoutPopup.style.display = 'block';
+});
+
+// Close sign out popup and perform sign out based on user's choice
+function closeSignoutPopup() {
+  // Close the sign out popup
+  signoutPopup.style.display = 'none';
+}
+
+signoutYesBtn.addEventListener('click', () => {
+  // Perform sign out
+  console.log('Signed out.');
+
+  closeSignoutPopup();
+});
+
+signoutNoBtn.addEventListener('click', () => {
+  closeSignoutPopup();
+});
+
+// Close the sign out popup when any option other than "Sign Out" is clicked
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (link.getAttribute('href') !== '#SignOut') {
+      closeSignoutPopup();
+    }
+  });
+});
+
   </script>
 </body>
 </html>
