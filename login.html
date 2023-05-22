@@ -14,14 +14,14 @@
                 <button type="button" class="toggle-btn" onclick="register()"><b>Register</b></button>
             </div>
             <form id="login" class="input-group">
-                <input type="emaill" class="input-field" placeholder="Enter your E-mail" id="emaill">
+                <input type="email" class="input-field" placeholder="Enter your E-mail" id="emaillogin">
                 <p id="emailerrorl" class="error"></p>
-                <input type="password" class="input-field" placeholder="Enter Password" id="passl">
+                <input type="password" class="input-field" placeholder="Enter Password" id="passlogin">
                 <p id="passerrorl" class="error"></p>
                 <div class="forget-pass text-left"><a href="forget-password.html">Forgot password?</a></div>
                 
                 <input type="checkbox" class="check-box"><span>Remember Password</span>
-                <a href="#" input type="submit" class="submit-btn" onclick="return vf1()"><b>Login</b></a>
+                <a href="profile.html" input type="submit" class="submit-btn" onclick="return vf1()"><b>Login</b></a>
             </form>
             <form action="" id="register" class="input-group" >
                 <input type="text" class="input-field" placeholder="Enter Your Name" id="name">
@@ -165,8 +165,8 @@ if (!genderSelected) {
         
     </script>
      <script>
-        let passl = document.getElementById("pass");
-        let emaill = document.getElementById("email");
+        let passlogin = document.getElementById("passlogin");
+        let emaillogin = document.getElementById("emailogin");
         let emailRegexl = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         let flag1=1;
 
@@ -174,7 +174,7 @@ if (!genderSelected) {
             if(email.value == "") {
             document.getElementById("emailerrorl").innerHTML = "E-mail Id can't be empty";
             flag1=0;
-            }else if(!emailRegexl.test(emaill.value)) {
+            }else if(!emailRegexl.test(email.value)) {
             document.getElementById("emailerrorl").innerHTML = "Please enter a valid email address";
             flag1=0;
             }else{
@@ -182,13 +182,13 @@ if (!genderSelected) {
             flag1=1;
             }
 
-            if(passl.value == "") {
+            if(password.value == "") {
                 document.getElementById("passerrorl").innerHTML = "Password can't be empty";
                 flag1=0;
-            }else if(passl.value.length < 8) {
+            }else if(password.value.length < 8) {
                 document.getElementById("passerrorl").innerHTML = "Password must be at least 8 character long";
                 flag1=0;
-            }else if(passl.value.length > 20) {
+            }else if(password.value.length > 20) {
                 document.getElementById("passerrorl").innerHTML = "Password can't be 20 character long";
                 flag1=0;
             }else{

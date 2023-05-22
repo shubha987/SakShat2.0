@@ -62,15 +62,39 @@ nav ul li{
     margin-right: 30px;
     position: relative;
     left: 100px;
-    bottom: 55px;
+    bottom: 45px;
 }
 
-footer {
-    background-color: lightcoral;
+.footer{
+    display: flex;
     color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5rem 2%;
+    background-color: lightcoral;
+}
+
+.footer-text p{
+    font-size: 1.5rem;
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    padding: .8rem;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop:hover a{
+    box-shadow: 0 0 .5rem rgb(219, 81, 1);
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: white;
 }
 
 nav ul li a{
@@ -130,7 +154,6 @@ nav ul li a:hover{
 .vip{
 	font-size: 22px;
 	color:darkgoldenrod;
-    right: 10px;
     position: relative;
 	text-shadow: 0 0 5px rgb(230, 175, 38),
 				 0 0 20px rgb(230, 175, 38),
@@ -303,4 +326,34 @@ nav ul li a:hover{
         position: relative;
         left: 150px;
     }
+    }
+
+    @media (max-width: 1200px) {
+        html {
+            font-size: 60%;
+        }
+
+        .f1{
+            font-size: 15px;
+            position: relative;
+            right: 50px;
+        }
+    }
+    
+    @media (max-width: 991px) {
+        .footer {
+            padding: 2rem 3%;
+        }
+    }
+    
+    @media (max-width: 450px) {
+    
+        .footer{
+            flex-direction: column-reverse;
+        }
+    
+        .footer p{
+            text-align: center;
+            margin-top: .2rem;
+        }
     }
